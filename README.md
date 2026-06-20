@@ -1,6 +1,8 @@
-# MVP – Sprint: Machine Learning & Analytics  
-### Sprint: Machine Learning & Analytics — PUC‑Rio  
-**Autor:** Paulo Ricardo Marques Leite  
+# 📘 MVP de Machine Learning & Analytics para Fundos de Investimento
+
+### Autor: Paulo Ricardo Marques Leite  
+**Matrícula:** 4052025002553  
+**Data:** 07/2026  
 
 ---
 
@@ -11,20 +13,31 @@ Clique abaixo para abrir o notebook diretamente no Google Colab:
 
 ---
 
-## 📘 Sobre o Projeto
-Este projeto apresenta um MVP de análise exploratória de fundos de investimento, com foco em **boas práticas de análise de dados**, **visualização clara** e **comunicação objetiva dos resultados**.
+## 🎯 Objetivo Geral
 
-O objetivo é oferecer uma visão didática sobre métricas de risco e retorno, utilizando Python e ferramentas amplamente adotadas no ecossistema de Data Science.
+Este projeto constrói um **MVP completo de Machine Learning & Analytics** para prever o **retorno de 1 ano (`returns_1yr`)** de fundos de investimento, utilizando métricas de risco, performance e estrutura dos fundos.
+
+O ciclo completo de ciência de dados é seguido:
+> Definição do problema → EDA → Preparação → Modelagem → Avaliação → Interpretação → Conclusões
+
+---
+
+## 🧠 Tipo de Problema
+**Regressão** — previsão de variável contínua.
 
 ---
 
-## 🎯 Objetivos do Projeto
-- Explorar métricas de risco e retorno de fundos de investimento.  
-- Identificar padrões, distribuições e relações entre variáveis.  
-- Aplicar boas práticas de análise de dados e visualização.  
-- Criar um notebook claro, organizado e didático para avaliação acadêmica.  
+## 📦 Entregáveis
+- Análise exploratória detalhada (EDA)  
+- Pipeline de pré-processamento (numérico + categórico)  
+- Modelos lineares e não lineares  
+- Baseline comparativo  
+- Otimização de hiperparâmetros  
+- Interpretação dos resultados  
+- Conclusões e próximos passos  
 
 ---
+
 ## 📂 Estrutura do Repositório
 
 | Arquivo / Pasta | Descrição |
@@ -35,38 +48,82 @@ O objetivo é oferecer uma visão didática sobre métricas de risco e retorno, 
 
 ---
 
-## 🧠 Principais Etapas do Trabalho
-1. **Exploração e tratamento dos dados**  
-2. **Construção do pipeline de modelagem**  
-3. **Treinamento e otimização do modelo Random Forest**  
-4. **Avaliação de desempenho (métricas e gráficos)**  
-5. **Interpretação dos resultados e análise de variáveis**  
-6. **Discussão de limitações e trabalhos futuros**
+
+## 🔗 Fonte dos Dados
+Dataset público disponível em:  
+[Comprehensive Mutual Funds Data](https://raw.githubusercontent.com/pleiteues-code/mvp-machine-learning-analytics/refs/heads/main/comprehensive_mutual_funds_data.csv)
+
+> Contém mais de 800 fundos e 20 variáveis, incluindo métricas de risco, retorno e estrutura.
 
 ---
 
-## 📊 Resultados
-O modelo apresentou desempenho consistente, capturando padrões relevantes nos retornos dos fundos e demonstrando boa aderência visual entre valores reais e previstos.  
-As análises gráficas e métricas confirmam a viabilidade da abordagem proposta.
+## ⚙️ Tecnologias Utilizadas
+- **Python 3.10+**
+- **Bibliotecas:**  
+  `pandas`, `numpy`, `matplotlib`, `seaborn`, `scikit-learn`
+- **Modelos:**  
+  - DummyRegressor (baseline)  
+  - Ridge Regression (linear)  
+  - Random Forest Regressor (não linear)
 
 ---
 
-## 📎 Requisitos
-Para execução local:
-```bash
-pip install pandas numpy matplotlib seaborn scikit-learn
+## 📊 Principais Resultados
+
+| Modelo | MAE | RMSE | R² |
+|--------|-----|------|----|
+| Baseline | ~3.5 | ~5.2 | 0.00 |
+| Ridge Regression | ~3.1 | ~4.9 | 0.28 |
+| Random Forest | ~2.9 | ~4.8 | 0.33 |
+
+> O **Random Forest** apresentou melhor desempenho geral, capturando relações não lineares entre risco, retorno e estrutura dos fundos.
 
 ---
 
-## 🧾 Conclusões
-A análise exploratória permitiu compreender melhor o comportamento dos fundos de investimento a partir de métricas de risco e retorno.
+## 🔍 Insights e Interpretações
 
-Alguns pontos se destacam:
+- Retornos históricos (3 e 5 anos) são os principais preditores do retorno de 1 ano.  
+- Métricas de risco (Sharpe, Sortino, Beta, Alpha) têm influência significativa.  
+- Categorias e subcategorias de fundos explicam parte da variabilidade dos retornos.  
+- O *expense ratio* tende a impactar negativamente o retorno líquido.  
 
-- Fundos mais arriscados tendem a apresentar retornos maiores, mas com grande dispersão — reforçando que risco elevado não garante desempenho superior.  
-- O Sharpe Ratio mostrou diferenças relevantes entre categorias, evidenciando que a relação risco/retorno varia bastante conforme o tipo de fundo.  
-- Os retornos de 1, 3 e 5 anos apresentaram correlações positivas, sugerindo certa persistência de desempenho ao longo do tempo.  
-- A presença de outliers é parte natural do universo de fundos; por isso, optou-se por mantê-los nos dados originais, aplicando apenas ajustes visuais quando necessário.  
-- As visualizações ajudaram a revelar padrões e assimetrias que não seriam facilmente percebidos apenas com estatísticas descritivas.  
+---
 
-No conjunto, o estudo reforça a importância de analisar múltiplas métricas simultaneamente e de interpretar risco e retorno de forma contextualizada, considerando tanto a categoria do fundo quanto sua consistência histórica.
+## 📈 Visualizações
+
+- **Comparativo de métricas dos modelos** → `01_comparativo_de_metricas_dos_modelos.png`  
+- **Importância das variáveis (Random Forest)** → `02_variaveis_do_random_forest.png`  
+- **Valores reais vs previstos** → `03_comparacao_valores_reais_x_previstos.png`  
+- **Análise dos resíduos** → `04_analise_dos_residuos.png`
+
+---
+
+## 🧩 Conclusões
+
+- O modelo Random Forest é o mais adequado para capturar padrões complexos nos dados.  
+- O desempenho (R² ≈ 0.23–0.33) é compatível com a natureza volátil dos retornos financeiros.  
+- O MVP demonstra um pipeline robusto e reprodutível para análise preditiva de fundos.  
+
+---
+
+## 🚀 Próximos Passos
+
+- Explorar modelos baseados em *Gradient Boosting* (XGBoost, LightGBM).  
+- Incluir variáveis macroeconômicas externas.  
+- Implementar validação temporal (rolling window).  
+- Criar dashboard interativo com *Streamlit* ou *Plotly Dash*.
+
+---
+
+## 🧾 Licença
+Este projeto é disponibilizado sob a licença **MIT**.  
+Sinta-se livre para usar, modificar e compartilhar com atribuição.
+
+---
+
+## 📬 Contato
+**GitHub:** [pleiteues-code](https://github.com/pleiteues-code)  
+**E-mail:** pleiteues@gmail.com
+---
+
+> *“Machine Learning não prevê o futuro — ele revela padrões que o presente já contém.”*
