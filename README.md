@@ -33,6 +33,13 @@ mvp-machine-learning-analytics/
 ├── comprehensive_mutual_funds_data.csv                            # Dataset utilizado
 └── README.md                                                      # Documento explicativo
 
+mvp-machine-learning-analytics/
+│
+├── comprehensive_mutual_funds_data.csv                             # Dataset utilizado
+│
+├── MVP_Machine_Learning_e_Analytics_Paulo_Ricardo_Pleiteu.ipynb     # Notebook principal do projeto
+│
+└── README.md                     # Este arquivo
 
 ---
 ## 🚀 Execução do Notebook (Google Colab)
