@@ -1,16 +1,23 @@
-# MVP – Machine Learning e Analytics  
+# MVP – Sprint: Machine Learning & Analytics  
 ### Análise de Fundos de Investimento  
-**Autor:** Paulo Ricardo Pleiteu  
-**Disciplina:** Machine Learning e Analytics (40530010055_20260_01)  
-**Instituição:** Universidade Veiga de Almeida  
+**Autor:** Paulo Ricardo Marques Leite  
+**Instituição:** PUC‑Rio  
+**Disciplina:** Sprint: Machine Learning & Analytics  
 
 ---
 
 ## 📘 Descrição do Projeto
-Este repositório contém o trabalho final (MVP) da disciplina **Machine Learning e Analytics**, cujo objetivo é aplicar técnicas de aprendizado de máquina para prever o retorno de fundos de investimento com base em variáveis financeiras e estruturais.
+Este repositório contém o trabalho final (MVP) da disciplina **Sprint: Machine Learning & Analytics**, cujo objetivo é aplicar técnicas de aprendizado de máquina para prever o retorno de fundos de investimento com base em variáveis financeiras e estruturais.
 
-O projeto foi desenvolvido em **Python**, utilizando bibliotecas como `pandas`, `numpy`, `matplotlib`, `seaborn` e `scikit-learn`.  
-O modelo principal é um **Random Forest Regressor**, escolhido por sua robustez e capacidade de capturar relações não lineares entre as variáveis.
+O projeto foi desenvolvido em **Python**, utilizando bibliotecas como:
+
+- pandas  
+- numpy  
+- matplotlib  
+- seaborn  
+- scikit-learn  
+
+O modelo principal utilizado é um **Random Forest Regressor**, escolhido por sua robustez e capacidade de capturar relações não lineares entre as variáveis.
 
 ---
 
