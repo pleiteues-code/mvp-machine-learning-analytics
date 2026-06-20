@@ -25,29 +25,14 @@ O objetivo é oferecer uma visão didática sobre métricas de risco e retorno, 
 - Criar um notebook claro, organizado e didático para avaliação acadêmica.  
 
 ---
-
 ## 📂 Estrutura do Repositório
-mvp-machine-learning-analytics/
-│
-├── MVP_Machine_Learning_e_Analytics_Paulo_Ricardo_Pleiteu.ipynb  # Notebook principal
-├── comprehensive_mutual_funds_data.csv                            # Dataset utilizado
-└── README.md                                                      # Documento explicativo
 
-mvp-machine-learning-analytics/
-│
-├── comprehensive_mutual_funds_data.csv                             # Dataset utilizado
-│
-├── MVP_Machine_Learning_e_Analytics_Paulo_Ricardo_Pleiteu.ipynb     # Notebook principal do projeto
-│
-└── README.md                     # Este arquivo
+| Arquivo / Pasta | Descrição |
+|------------------|------------|
+| `comprehensive_mutual_funds_data.csv` | Dataset utilizado na análise |
+| `MVP_Machine_Learning_e_Analytics_Paulo_Ricardo.ipynb` | Notebook principal do projeto |
+| `README.md` | Documento explicativo |
 
----
-## 🚀 Execução do Notebook (Google Colab)
-Para visualizar e executar o notebook diretamente no **Google Colab**, utilize o link abaixo:
-
-👉 **[Abrir no Google Colab](https://colab.research.google.com/github/pleiteues-code/mvp-machine-learning-analytics/blob/main/MVP_Machine_Learning_e_Analytics_Paulo_Ricardo.ipynb)**
-
-O notebook pode ser executado integralmente no Colab sem necessidade de configuração adicional, bastando carregar o dataset incluído no repositório.
 ---
 
 ## 🧠 Principais Etapas do Trabalho
@@ -72,6 +57,16 @@ Para execução local:
 pip install pandas numpy matplotlib seaborn scikit-learn
 
 ---
-## Conclusão
 
-O trabalho cumpre o objetivo proposto pela disciplina, demonstrando a aplicação prática de aprendizado de máquina na análise de dados financeiros e oferecendo uma visão quantitativa sobre o comportamento dos fundos de investimento.
+## 🧾 Conclusões
+A análise exploratória permitiu compreender melhor o comportamento dos fundos de investimento a partir de métricas de risco e retorno.
+
+Alguns pontos se destacam:
+
+- Fundos mais arriscados tendem a apresentar retornos maiores, mas com grande dispersão — reforçando que risco elevado não garante desempenho superior.  
+- O Sharpe Ratio mostrou diferenças relevantes entre categorias, evidenciando que a relação risco/retorno varia bastante conforme o tipo de fundo.  
+- Os retornos de 1, 3 e 5 anos apresentaram correlações positivas, sugerindo certa persistência de desempenho ao longo do tempo.  
+- A presença de outliers é parte natural do universo de fundos; por isso, optou-se por mantê-los nos dados originais, aplicando apenas ajustes visuais quando necessário.  
+- As visualizações ajudaram a revelar padrões e assimetrias que não seriam facilmente percebidos apenas com estatísticas descritivas.  
+
+No conjunto, o estudo reforça a importância de analisar múltiplas métricas simultaneamente e de interpretar risco e retorno de forma contextualizada, considerando tanto a categoria do fundo quanto sua consistência histórica.
