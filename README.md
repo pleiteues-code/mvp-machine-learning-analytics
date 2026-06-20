@@ -1,23 +1,28 @@
 # MVP – Sprint: Machine Learning & Analytics  
-### Análise de Fundos de Investimento  
+### Sprint: Machine Learning & Analytics — PUC‑Rio  
 **Autor:** Paulo Ricardo Marques Leite  
-**Instituição:** PUC‑Rio  
-**Disciplina:** Sprint: Machine Learning & Analytics  
 
 ---
 
-## 📘 Descrição do Projeto
-Este repositório contém o trabalho final (MVP) da disciplina **Sprint: Machine Learning & Analytics**, cujo objetivo é aplicar técnicas de aprendizado de máquina para prever o retorno de fundos de investimento com base em variáveis financeiras e estruturais.
+## 🔗 Executar o Notebook  
+Clique abaixo para abrir o notebook diretamente no Google Colab:
 
-O projeto foi desenvolvido em **Python**, utilizando bibliotecas como:
+👉 [Abrir no Google Colab](https://colab.research.google.com/github/pleiteues-code/mvp-machine-learning-analytics/blob/main/MVP_Machine_Learning_e_Analytics_Paulo_Ricardo.ipynb)
 
-- pandas  
-- numpy  
-- matplotlib  
-- seaborn  
-- scikit-learn  
+---
 
-O modelo principal utilizado é um **Random Forest Regressor**, escolhido por sua robustez e capacidade de capturar relações não lineares entre as variáveis.
+## 📘 Sobre o Projeto
+Este projeto apresenta um MVP de análise exploratória de fundos de investimento, com foco em **boas práticas de análise de dados**, **visualização clara** e **comunicação objetiva dos resultados**.
+
+O objetivo é oferecer uma visão didática sobre métricas de risco e retorno, utilizando Python e ferramentas amplamente adotadas no ecossistema de Data Science.
+
+---
+
+## 🎯 Objetivos do Projeto
+- Explorar métricas de risco e retorno de fundos de investimento.  
+- Identificar padrões, distribuições e relações entre variáveis.  
+- Aplicar boas práticas de análise de dados e visualização.  
+- Criar um notebook claro, organizado e didático para avaliação acadêmica.  
 
 ---
 
