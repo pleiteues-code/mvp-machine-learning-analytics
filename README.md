@@ -30,14 +30,12 @@ mvp-machine-learning-analytics/
 
 
 ---
+## 🚀 Execução do Notebook (Google Colab)
+Para visualizar e executar o notebook diretamente no **Google Colab**, utilize o link abaixo:
 
-## 🚀 Execução do Notebook
-Para visualizar e executar o notebook diretamente no **Google Colab**, clique no link abaixo:
+👉 **[Abrir no Google Colab](https://colab.research.google.com/github/pleiteues-code/mvp-machine-learning-analytics/blob/main/MVP_Machine_Learning_e_Analytics_Paulo_Ricardo.ipynb)**
 
-👉 [Abrir no Google Colab][https://colab.research.google.com/github/pleiteues-code/mvp-machine-learning-analytics/refs/heads/main/MVP_Machine_Learning_e_Analytics_Paulo_Ricardo_Pleiteu.ipynb](https://colab.research.google.com/github/pleiteues-code/mvp-machine-learning-analytics/blob/main/MVP_Machine_Learning_e_Analytics_Paulo_Ricardo_Leite.ipynb
-)
-> O notebook pode ser executado integralmente no Colab sem necessidade de configuração adicional, bastando carregar o dataset incluído no repositório.
-
+O notebook pode ser executado integralmente no Colab sem necessidade de configuração adicional, bastando carregar o dataset incluído no repositório.
 ---
 
 ## 🧠 Principais Etapas do Trabalho
