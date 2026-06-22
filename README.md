@@ -1,4 +1,4 @@
-# 📘 MVP de Machine Learning & Analytics para Fundos de Investimento
+# 📊 MVP Machine Learning & Analytics – Predição de Rentabilidade de Fundos de Investimento
 
 ### Autor: Paulo Ricardo Marques Leite  
 **Matrícula:** 4052025002553  
@@ -12,7 +12,6 @@ Clique abaixo para abrir o notebook diretamente no Google Colab:
 👉 [Abrir no Google Colab](https://colab.research.google.com/github/pleiteues-code/mvp-machine-learning-analytics/blob/main/MVP_Machine_Learning_e_Analytics_Paulo_Ricardo.ipynb)
 
 ---
-# 📊 MVP Machine Learning & Analytics – Predição de Rentabilidade de Fundos de Investimento
 
 ## 📌 Objetivo
 
