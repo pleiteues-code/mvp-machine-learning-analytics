@@ -12,112 +12,205 @@ Clique abaixo para abrir o notebook diretamente no Google Colab:
 👉 [Abrir no Google Colab](https://colab.research.google.com/github/pleiteues-code/mvp-machine-learning-analytics/blob/main/MVP_Machine_Learning_e_Analytics_Paulo_Ricardo.ipynb)
 
 ---
+# 📊 MVP Machine Learning & Analytics – Predição de Rentabilidade de Fundos de Investimento
 
-## 🎯 Objetivo Geral
+## 📌 Objetivo
 
-Este projeto constrói um **MVP completo de Machine Learning & Analytics** para prever o **retorno de 1 ano (`returns_1yr`)** de fundos de investimento, utilizando métricas de risco, performance e estrutura dos fundos.
+Este projeto tem como objetivo desenvolver um modelo de Machine Learning capaz de prever a rentabilidade anual de fundos de investimento (`returns_1yr`) a partir de indicadores de risco, desempenho histórico, características estruturais e métricas de gestão.
 
-O ciclo completo de ciência de dados é seguido:
-> Definição do problema → EDA → Preparação → Modelagem → Avaliação → Interpretação → Conclusões
+O trabalho foi desenvolvido como MVP (Minimum Viable Product) para aplicação prática dos conceitos de Ciência de Dados e Machine Learning, contemplando todo o ciclo de desenvolvimento analítico:
 
----
-
-## 🧠 Tipo de Problema
-**Regressão** — previsão de variável contínua.
-
----
-
-## 📦 Entregáveis
-- Análise exploratória detalhada (EDA)  
-- Pipeline de pré-processamento (numérico + categórico)  
-- Modelos lineares e não lineares  
-- Baseline comparativo  
-- Otimização de hiperparâmetros  
-- Interpretação dos resultados  
-- Conclusões e próximos passos  
+* Análise Exploratória dos Dados (EDA)
+* Tratamento e preparação dos dados
+* Engenharia de atributos
+* Construção de pipelines
+* Treinamento de modelos preditivos
+* Validação cruzada
+* Otimização de hiperparâmetros
+* Avaliação e interpretação dos resultados
 
 ---
 
-## 📂 Estrutura do Repositório
+## 📂 Dataset
 
-| Arquivo / Pasta | Descrição |
-|------------------|------------|
-| `comprehensive_mutual_funds_data.csv` | Dataset utilizado na análise |
-| `MVP_Machine_Learning_e_Analytics_Paulo_Ricardo.ipynb` | Notebook principal do projeto |
-| `README.md` | Documento explicativo |
+O dataset contém informações de fundos de investimento, incluindo:
 
----
+* Rentabilidades históricas
+* Indicadores de risco
+* Alpha
+* Beta
+* Sharpe Ratio
+* Sortino Ratio
+* Taxa de administração
+* Patrimônio do fundo
+* Idade do fundo
+* Classificação e categoria
 
+**Base utilizada:**
 
-## 🔗 Fonte dos Dados
-Dataset público disponível em:  
-[Comprehensive Mutual Funds Data](https://raw.githubusercontent.com/pleiteues-code/mvp-machine-learning-analytics/refs/heads/main/comprehensive_mutual_funds_data.csv)
+`comprehensive_mutual_funds_data.csv`
 
-> Contém mais de 800 fundos e 20 variáveis, incluindo métricas de risco, retorno e estrutura.
+**Dimensões da base:**
 
----
-
-## ⚙️ Tecnologias Utilizadas
-- **Python 3.10+**
-- **Bibliotecas:**  
-  `pandas`, `numpy`, `matplotlib`, `seaborn`, `scikit-learn`
-- **Modelos:**  
-  - DummyRegressor (baseline)  
-  - Ridge Regression (linear)  
-  - Random Forest Regressor (não linear)
+* 814 fundos de investimento
+* 20 atributos originais
 
 ---
 
-## 📊 Principais Resultados
+## 🛠️ Tecnologias Utilizadas
 
-| Modelo | MAE | RMSE | R² |
-|--------|-----|------|----|
-| Baseline | ~3.5 | ~5.2 | 0.00 |
-| Ridge Regression | ~3.1 | ~4.9 | 0.28 |
-| Random Forest | ~2.9 | ~4.8 | 0.33 |
-
-> O **Random Forest** apresentou melhor desempenho geral, capturando relações não lineares entre risco, retorno e estrutura dos fundos.
-
----
-
-## 🔍 Insights e Interpretações
-
-- Retornos históricos (3 e 5 anos) são os principais preditores do retorno de 1 ano.  
-- Métricas de risco (Sharpe, Sortino, Beta, Alpha) têm influência significativa.  
-- Categorias e subcategorias de fundos explicam parte da variabilidade dos retornos.  
-- O *expense ratio* tende a impactar negativamente o retorno líquido.  
+* Python
+* Pandas
+* NumPy
+* Scikit-Learn
+* Matplotlib
+* Seaborn
 
 ---
 
-## 📈 Visualizações
+## 🔍 Engenharia de Atributos
 
-- **Comparativo de métricas dos modelos** → `01_comparativo_de_metricas_dos_modelos.png`  
-- **Importância das variáveis (Random Forest)** → `02_variaveis_do_random_forest.png`  
-- **Valores reais vs previstos** → `03_comparacao_valores_reais_x_previstos.png`  
-- **Análise dos resíduos** → `04_analise_dos_residuos.png`
+Além das variáveis originais, foram criadas novas métricas para aumentar a capacidade preditiva dos modelos:
 
----
+| Variável             | Descrição                                    |
+| -------------------- | -------------------------------------------- |
+| `return_gap`         | Diferença entre retorno de 3 e 5 anos        |
+| `risk_return_ratio`  | Relação entre Sharpe e nível de risco        |
+| `size_age_ratio`     | Relação entre patrimônio e idade do fundo    |
+| `expense_per_rating` | Relação entre taxa de administração e rating |
 
-## 🧩 Conclusões
-
-- O modelo Random Forest é o mais adequado para capturar padrões complexos nos dados.  
-- O desempenho (R² ≈ 0.23–0.33) é compatível com a natureza volátil dos retornos financeiros.  
-- O MVP demonstra um pipeline robusto e reprodutível para análise preditiva de fundos.  
+A variável **Risk Return Ratio** destacou-se posteriormente entre os atributos mais importantes para o modelo final.
 
 ---
 
-## 🚀 Próximos Passos
+## 🤖 Modelos Avaliados
 
-- Explorar modelos baseados em *Gradient Boosting* (XGBoost, LightGBM).  
-- Incluir variáveis macroeconômicas externas.  
-- Implementar validação temporal (rolling window).  
-- Criar dashboard interativo com *Streamlit* ou *Plotly Dash*.
+Foram comparados quatro modelos de regressão.
+
+### 1. Dummy Regressor (Baseline)
+
+Modelo utilizado como referência mínima de desempenho.
+
+| Métrica | Resultado |
+| ------- | --------: |
+| R²      |    -0.009 |
 
 ---
 
-## 🧾 Licença
-Este projeto é disponibilizado sob a licença **MIT**.  
-Sinta-se livre para usar, modificar e compartilhar com atribuição.
+### 2. Ridge Regression
+
+Modelo linear com regularização para redução de overfitting.
+
+| Métrica | Resultado |
+| ------- | --------: |
+| R²      |     0.280 |
+
+---
+
+### 3. Random Forest
+
+Modelo baseado em múltiplas árvores de decisão.
+
+| Métrica | Resultado |
+| ------- | --------: |
+| R²      |     0.517 |
+| MAE     |     2.087 |
+| RMSE    |     3.816 |
+
+---
+
+### 4. Gradient Boosting
+
+Modelo de ensemble baseado em boosting sequencial.
+
+| Métrica | Resultado |
+| ------- | --------: |
+| R²      |     0.516 |
+| MAE     |     2.220 |
+| RMSE    |     3.819 |
+
+---
+
+## 🏆 Modelo Selecionado
+
+O **Random Forest** foi escolhido como modelo final por apresentar:
+
+* Melhor desempenho no conjunto de teste;
+* Menor erro absoluto médio (MAE);
+* Menor RMSE;
+* Boa capacidade de generalização;
+* Facilidade de interpretação através da análise de importância das variáveis.
+
+Durante a etapa de otimização com `RandomizedSearchCV`, os resultados permaneceram praticamente inalterados, indicando que a configuração inicial já estava próxima de uma solução adequada para o problema analisado.
+
+---
+
+## 📈 Principais Variáveis Identificadas
+
+As variáveis mais importantes para a previsão dos retornos anuais foram:
+
+| Variável           | Importância |
+| ------------------ | ----------: |
+| SD (Desvio Padrão) |       26.0% |
+| Alpha              |       16.3% |
+| Returns 5yr        |       10.1% |
+| Beta               |        8.6% |
+| Risk Return Ratio  |        5.3% |
+
+---
+
+## 📊 O que os Dados Revelam sobre a Performance dos Fundos
+
+Os resultados mostram que a rentabilidade anual dos fundos está fortemente associada a indicadores clássicos de risco e desempenho.
+
+Entre os fatores com maior influência sobre as previsões realizadas pelo modelo destacaram-se:
+
+* Volatilidade do fundo (SD);
+* Alpha;
+* Histórico de rentabilidade em 5 anos;
+* Beta;
+* Relação entre risco e retorno.
+
+Os achados sugerem que fundos capazes de gerar retorno consistente ajustado ao risco tendem a apresentar padrões de desempenho mais previsíveis do que aqueles avaliados apenas por características operacionais ou administrativas.
+
+Outro ponto relevante é que o histórico de performance continua sendo uma fonte importante de informação para estimar resultados futuros, especialmente quando analisado em conjunto com métricas de risco e qualidade da gestão.
+
+A análise também evidenciou que indicadores relacionados à geração de alpha e ao controle de volatilidade possuem papel central na explicação dos retornos observados, reforçando conceitos amplamente utilizados pela indústria de gestão de recursos.
+
+De forma geral, o estudo demonstra que técnicas de Machine Learning podem ser utilizadas para identificar padrões relevantes no comportamento dos fundos de investimento, fornecendo suporte quantitativo para análises e processos de tomada de decisão.
+
+---
+
+## 📊 Resultado Final
+
+O modelo final foi capaz de explicar aproximadamente:
+
+### **52% da variabilidade dos retornos anuais dos fundos de investimento**
+
+**Métricas finais:**
+
+| Métrica | Resultado |
+| ------- | --------: |
+| R²      |     0.517 |
+| MAE     |     2.087 |
+| RMSE    |     3.816 |
+
+Considerando a elevada complexidade e imprevisibilidade do mercado financeiro, esse resultado demonstra que técnicas de Machine Learning podem fornecer informações relevantes para apoiar análises quantitativas de fundos de investimento.
+
+---
+
+## 🚀 Possíveis Evoluções
+
+Como extensões futuras do projeto, podem ser explorados:
+
+* XGBoost
+* LightGBM
+* CatBoost
+* Variáveis macroeconômicas
+* Séries temporais
+* Dados de mercado em tempo real
+* Seleção avançada de atributos
+* Explainable AI (SHAP Values)
 
 ---
 
