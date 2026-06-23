@@ -19,7 +19,9 @@ Clique abaixo para abrir o notebook diretamente no Google Colab:
 <p align="center">
 Comparação entre os retornos reais observados e os retornos previstos pelo modelo Random Forest.
 </p>
+
 ---
+
 ## 📌 Objetivo
 
 Este projeto tem como objetivo desenvolver um modelo de Machine Learning capaz de prever a rentabilidade anual de fundos de investimento (`returns_1yr`) a partir de indicadores de risco, desempenho histórico, características estruturais e métricas de gestão.
