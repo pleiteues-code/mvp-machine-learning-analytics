@@ -198,6 +198,8 @@ O modelo final foi capaz de explicar aproximadamente 52% da variabilidade dos re
 Desempenho do modelo Random Forest na previsão da rentabilidade anual dos fundos de investimento.
 </p>
 
+Observa-se que as previsões acompanham de forma consistente a tendência dos valores reais, indicando que o modelo foi capaz de capturar padrões relevantes presentes nos dados e generalizar adequadamente para observações não utilizadas durante o treinamento.
+
 Considerando a elevada complexidade e imprevisibilidade do mercado financeiro, esse resultado demonstra que técnicas de Machine Learning podem fornecer informações relevantes para apoiar análises quantitativas de fundos de investimento.
 
 ---
