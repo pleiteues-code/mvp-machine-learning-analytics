@@ -13,7 +13,7 @@ Clique abaixo para abrir o notebook diretamente no Google Colab:
 
 ---
 <p align="center">
-  <img src="/03_comparacao_valores_reais_x_previstos.png" width="700">
+ <img src="/03_comparacao_valores_reais_x_previstos.png" width="700">
 </p>
 
 <p align="center">
