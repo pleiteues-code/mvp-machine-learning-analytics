@@ -178,20 +178,25 @@ A análise também evidenciou que indicadores relacionados à geração de alpha
 De forma geral, o estudo demonstra que técnicas de Machine Learning podem ser utilizadas para identificar padrões relevantes no comportamento dos fundos de investimento, fornecendo suporte quantitativo para análises e processos de tomada de decisão.
 
 ---
-
 ## 📊 Resultado Final
 
-O modelo final foi capaz de explicar aproximadamente:
-
-### **52% da variabilidade dos retornos anuais dos fundos de investimento**
-
-**Métricas finais:**
+O modelo final foi capaz de explicar aproximadamente 52% da variabilidade dos retornos anuais dos fundos de investimento.
 
 | Métrica | Resultado |
-| ------- | --------: |
-| R²      |     0.517 |
-| MAE     |     2.087 |
-| RMSE    |     3.816 |
+|----------|----------:|
+| R² | 0.517 |
+| MAE | 2.087 |
+| RMSE | 3.816 |
+
+### Capacidade Preditiva do Modelo
+
+<p align="center">
+  <img src="/03_comparacao_valores_reais_x_previstos.png" width="700">
+</p>
+
+<p align="center">
+Desempenho do modelo Random Forest na previsão da rentabilidade anual dos fundos de investimento.
+</p>
 
 Considerando a elevada complexidade e imprevisibilidade do mercado financeiro, esse resultado demonstra que técnicas de Machine Learning podem fornecer informações relevantes para apoiar análises quantitativas de fundos de investimento.
 
