@@ -12,7 +12,14 @@ Clique abaixo para abrir o notebook diretamente no Google Colab:
 👉 [Abrir no Google Colab](https://colab.research.google.com/github/pleiteues-code/mvp-machine-learning-analytics/blob/main/MVP_Machine_Learning_e_Analytics_Paulo_Ricardo.ipynb)
 
 ---
+<p align="center">
+  <img src="/03_comparacao_valores_reais_x_previstos.png" width="700">
+</p>
 
+<p align="center">
+Comparação entre os retornos reais observados e os retornos previstos pelo modelo Random Forest.
+</p>
+---
 ## 📌 Objetivo
 
 Este projeto tem como objetivo desenvolver um modelo de Machine Learning capaz de prever a rentabilidade anual de fundos de investimento (`returns_1yr`) a partir de indicadores de risco, desempenho histórico, características estruturais e métricas de gestão.
